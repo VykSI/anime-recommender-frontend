@@ -65,7 +65,7 @@ export default {
   },
   methods: {
     registerUser(){
-        axios.post('http://localhost:3000/signup', {
+        axios.post('https://anime-recommender-backend-1.onrender.com/signup', {
         username: this.username,
         password: this.password
       })
@@ -82,7 +82,7 @@ export default {
   
     loginUser() {
         console.log(this.lusername);
-     axios.post('http://localhost:3000/signin', {
+     axios.post('https://anime-recommender-backend-1.onrender.com/signin', {
     username: this.lusername,
     password: this.lpassword,
   })
