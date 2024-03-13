@@ -581,7 +581,7 @@ export default {
     searchQuery: {
       handler(newValue) {
         if (newValue !== '') {
-      axios.get(`http://localhost:3000/search?title=${newValue}`)
+      axios.get(`https://anime-recommender-backend-1.onrender.com/search?title=${newValue}`)
         .then(response => {
           // Handle the API responsethis.searchResults = ["Result 1", "Result 2", "Result 3"];
           this.showResults = true;
