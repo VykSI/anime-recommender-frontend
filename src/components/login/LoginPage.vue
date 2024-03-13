@@ -48,6 +48,8 @@
 import axios from 'axios';
 export default {
    mounted() {
+       const cookieValue = Cookies.get('sessionid');
+      alert(`Cookie Value: ${cookieValue}`);
     localStorage.removeItem('token');
     // Access the container, register button, and login button when the component is mounted
     const container = document.getElementById('container');
