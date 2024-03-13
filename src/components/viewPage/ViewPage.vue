@@ -570,7 +570,7 @@ export default{
         let itemId = this.$route.params.id;
         itemId = itemId.replace(/\s+/g, '-');
         console.log(itemId);
-        axios.get(`http://localhost:3000/anime?title=${itemId}`)
+        axios.get(`https://anime-recommender-backend-1.onrender.com/anime?title=${itemId}`)
         .then(response => {
           this.title= response.data[0].titles[0].title;
           this.description=response.data[0].synopsis;
@@ -579,7 +579,7 @@ export default{
         .catch(error => {
           console.error('Error fetching item details', error);
         });
-        axios.get(`http://localhost:3000/recommend?title=${itemId}`)
+        axios.get(`https://anime-recommender-backend-1.onrender.com/recommend?title=${itemId}`)
         .then(response => {
           console.log(response.data);
           this.title1= response.data[4].title;
